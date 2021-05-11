@@ -1,0 +1,155 @@
+$primary-dblue: hsl(243, 87%, 12%);
+$primary-desatBlue: hsl(238, 22%, 44%);
+$neutral-lgreyBlue: hsl(240, 75%, 98%);
+$neutral-lgrey: hsl(0, 0%, 75%);
+$accent-bblue: hsl(224, 93%, 58%);
+$accent-cyan:hsl(170, 45%, 43%);
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1.5em;
+    margin-bottom: 2em;
+}
+
+.email {
+    margin-top: 1.5em;
+    margin-bottom:1em;
+    width:100%;
+    border-radius: 3px;
+    border-width:1px;
+    padding: .75em;
+    &-footer {
+        border:none;
+        width:75%;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Raleway";
+    margin-bottom: 1em;
+}
+
+p {
+    font-family: "Open sans";
+}
+
+.curve-mobile {
+    display:block;
+    width:100%;
+}
+
+.illustration , .illustration2 {
+    width:100%;
+    padding:2em;
+    display:block;
+}
+
+.logo {
+    width:5em;
+    cursor:pointer;
+}
+
+.icon-arrow{
+    cursor:pointer;
+}
+
+.nav-links {
+    list-style: none;
+
+    li {
+        margin: 0 .40em;
+        display:inline-block
+    }
+
+    a {
+        text-decoration: none;
+        font-family: "Open sans";
+        color:$primary-dblue;
+        font-size: .9em;
+    }
+}
+
+.content {
+    display:Flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:2em;
+    text-align: center;
+}
+
+.illustration2, .blue{
+    background-color: $neutral-lgreyBlue;
+}
+
+.al-left {
+    text-align: left;
+}
+
+.get-started-btn {
+    width:100%;
+    background: $accent-bblue;
+    color:white;
+    border-radius: 5px;
+    padding: .75em;
+    border: none;
+    font-family: "Open sans";
+    font-weight: 600;
+
+    &.early {
+        width:75%;
+        font-weight:400;
+    }
+}
+
+.early-access {
+    text-align: center;
+    background-color:$primary-desatBlue;
+    color:white;
+}
+
+.footer{
+    background-color:$primary-dblue;
+    color:white;
+    padding:2em;
+
+    li{
+        list-style: none;
+        margin:.5em;
+        a{
+            text-decoration: none;
+            color:White;
+        }
+        
+    }
+
+    &-logo {
+        display:block;
+        filter:brightness(0) invert(100);
+        margin-bottom: 2em;
+    }
+
+    &-contactgrid {
+        display:grid;
+        grid-template-columns: .25fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        margin-bottom: 2em;
+    }
+
+    &-ul1 {
+        margin-bottom:2em;
+    }
+
+}

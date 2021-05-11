@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 1.5em;
+  margin-bottom: 2em;
+}
+
+.email {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  width: 100%;
+  border-radius: 3px;
+  border-width: 1px;
+  padding: .75em;
+}
+
+.email-footer {
+  border: none;
+  width: 75%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Raleway";
+  margin-bottom: 1em;
+}
+
+p {
+  font-family: "Open sans";
+}
+
+.curve-mobile {
+  display: block;
+  width: 100%;
+}
+
+.illustration, .illustration2 {
+  width: 100%;
+  padding: 2em;
+  display: block;
+}
+
+.logo {
+  width: 5em;
+  cursor: pointer;
+}
+
+.icon-arrow {
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 .40em;
+  display: inline-block;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: "Open sans";
+  color: #070439;
+  font-size: .9em;
+}
+
+.content {
+  display: Flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em;
+  text-align: center;
+}
+
+.illustration2, .blue {
+  background-color: #f6f6fe;
+}
+
+.al-left {
+  text-align: left;
+}
+
+.get-started-btn {
+  width: 100%;
+  background: #3065f8;
+  color: white;
+  border-radius: 5px;
+  padding: .75em;
+  border: none;
+  font-family: "Open sans";
+  font-weight: 600;
+}
+
+.get-started-btn.early {
+  width: 75%;
+  font-weight: 400;
+}
+
+.early-access {
+  text-align: center;
+  background-color: #585989;
+  color: white;
+}
+
+.footer {
+  background-color: #070439;
+  color: white;
+  padding: 2em;
+}
+
+.footer li {
+  list-style: none;
+  margin: .5em;
+}
+
+.footer li a {
+  text-decoration: none;
+  color: White;
+}
+
+.footer-logo {
+  display: block;
+  -webkit-filter: brightness(0) invert(100);
+          filter: brightness(0) invert(100);
+  margin-bottom: 2em;
+}
+
+.footer-contactgrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: .25fr 2fr;
+      grid-template-columns: .25fr 2fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  margin-bottom: 2em;
+}
+
+.footer-ul1 {
+  margin-bottom: 2em;
+}
+/*# sourceMappingURL=style.css.map */
