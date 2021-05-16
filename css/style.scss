@@ -1,60 +1,118 @@
-$primary-dblue: hsl(243, 87%, 12%);
+$primary-dblue: #09064b;
 $primary-desatBlue: hsl(238, 22%, 44%);
 $neutral-lgreyBlue: hsl(240, 75%, 98%);
-$neutral-lgrey: hsl(0, 0%, 75%);
+$neutral-lgrey: hsl(0, 0%, 44%);
 $accent-bblue: hsl(224, 93%, 58%);
 $accent-cyan:hsl(170, 45%, 43%);
-
+$raleway : "Raleway";
+$sans : "Open Sans";
 
 * {
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-size:8px;
 }
+
+
+//Mobile Centering for smaller than desktop
 
 body {
     display:flex;
     flex-direction: column;
     align-items: center;
-    width:100vw;
+    width: 100vw;
 }
 
 section {
-    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 720px;
+    padding:4.5em;
 }
+
+//
 
 header {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5em 1.5em;
-    margin-bottom: 2em;
+    padding: 2em;
+    margin-bottom: 7em;
+    margin-top:1em;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: $sans;
+    margin-bottom: 1em;
+}
+
+h4 {
+    font-family: $sans;
+    font-weight: 800;
+}
+
+p {
+    font-family: $sans;
+    font-weight:400;
+}
+
+
+//GLOBAL Classes
+
+.content {
+    display:Flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align:center;
 }
 
 .email {
-    margin-top: 1.5em;
+    margin-top: 2em;
     margin-bottom:1em;
     width:100%;
     border-style:solid;
     border-radius: 3px;
     border-width:1px;
-    padding: .75em;
+    padding: 1em;
+    font-family: $raleway;
+    text-indent: .75em;
+    font-size:1.5rem;
+
+    &::placeholder {
+        color: rgba(0, 0, 0, 0.2);
+        font-weight: 400;
+    }
+
     &-footer {
         border:none;
-        width:75%;
+        width:70%;
+        text-indent: 0;
+        font-size: 1.25rem;
     }
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: "Raleway";
-    margin-bottom: 1em;
+.get-started-btn {
+    width:100%;
+    background: $accent-bblue;
+    color:white;
+    border-radius: 2.5px;
+    padding: 1em;
+    border: none;
+    font-family: "Open sans";
+    font-weight: 600;
+    font-size:1.5rem;
 }
 
-p {
-    font-family: "Open sans";
+.logo {
+    width:10em;
+    cursor:pointer;
 }
 
 .curve-mobile {
@@ -62,107 +120,324 @@ p {
     width:100%;
 }
 
-.illustration , .illustration2 {
+.curve-desktop {
+    display:none;
+}
+
+.illustration {
     width:100%;
     padding:2em;
     display:block;
 }
 
-.logo {
-    width:5em;
-    cursor:pointer;
+.nav-logo {
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.icon-arrow{
-    cursor:pointer;
-}
+
+//NAV Classes
 
 .nav-links {
     list-style: none;
 
     li {
-        margin: 0 .40em;
+        margin: 0 1.25em;
         display:inline-block
     }
 
     a {
         text-decoration: none;
-        font-family: "Open sans";
+        font-family: $raleway;
         color:$primary-dblue;
-        font-size: .9em;
+        font-size: 1.75rem;
+        font-weight:bold;
     }
 }
 
-.content {
-    display:Flex;
+//  SECTION 1 Classes
+
+.section1 {
+
+    h1 {
+        font-size: 2.85rem;
+        color:$primary-dblue;
+    }
+
+    p {
+        font-size:1.75rem;
+        color:$primary-dblue;
+    }
+}
+
+//  SECTION 2 Classes
+
+.section2{
+    background-color: $neutral-lgreyBlue;
+
+    h3 {
+        font-size:2rem;
+        color:$primary-dblue;
+    }
+    
+    p {
+        margin-top: 1em;
+        font-size:1.75rem;
+        text-align: left;
+        color:$neutral-lgrey;
+    }
+}
+
+.fylo-works {
+    font-family: $sans;
+    font-size: 1.75rem;
+    display:flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding:1.5em;
-    text-align: center;
-}
+    text-decoration: none;
+    color:#3da08f;
+    border-bottom-style: solid;
+    border-width: 1.95px;
+    padding-bottom: .5em;
+    margin: 3em 0;
 
-.illustration2, .blue{
-    background-color: $neutral-lgreyBlue;
-}
-
-.al-left {
-    text-align: left;
-}
-
-.get-started-btn {
-    width:100%;
-    background: $accent-bblue;
-    color:white;
-    border-radius: 5px;
-    padding: .75em;
-    border: none;
-    font-family: "Open sans";
-    font-weight: 600;
-
-    &.early {
-        width:75%;
-        font-weight:400;
+    .icon-arrow {
+        margin-left: .75em;
+        cursor:pointer;
     }
 }
 
-.early-access {
-    text-align: center;
-    background-color:$primary-desatBlue;
-    color:white;
+.card-quote {
+    background-color: white;
+    padding:3rem;
+    margin:2em;
+    line-height: 2.5rem;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); 
+
+    p {
+        margin:0;
+        font-size: 1.3rem;
+        color:$primary-dblue;
+    }
+
+    .quote {
+        margin: .25em 0;
+        font-weight: 500;
+        max-width: 60ch;
+    }
+
+    #icon-quotes {
+        width:1.75em;
+        margin-right: 100%;
+    }
+
+    .user {
+        display:flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    .testimonial-img {
+        border-radius: 100%;
+        width:3.5em;
+        margin-right: 1em;
+    }
+    
+    .name-title {
+        display:Flex;
+        flex-direction: column;
+        justify-content: start;
+        margin:0;
+    
+        h4 {
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color:$primary-dblue;
+        }
+    
+        p {
+            font-size:.85rem;
+        }
+    }
 }
 
+//  SECTION 3
+
+.section3 {
+    background-color:$primary-desatBlue;
+    color:white;
+    padding: 7em 0;
+    
+    h2 {
+        font-size: 2.75rem;
+        font-weight: 600;
+        font-family: $raleway;
+    }
+    p {
+        font-size: 1.75rem;
+        font-weight: 400;
+        line-height: 1.5em;
+        margin:0 3.5em;
+    }
+}
+
+// FOOTER Section
+
 .footer{
+    align-items: start;
     background-color:$primary-dblue;
     color:white;
-    padding:2em;
+    padding:5em;
+
+    .contact-methods{
+        margin: 5em 0;
+    }
+    .contact-content {
+        display:flex;
+        margin:3em 0;
+    }
+
+    .icon-contact {
+        margin-right:2em;
+    }
+
+    p {
+        font-size:2rem;
+    }
+
+    
 
     li{
+        font-family: $raleway;
         list-style: none;
-        margin:.5em;
-        a{
-            text-decoration: none;
-            color:White;
-        }
-        
+        margin:2.5em 0;
+    }
+
+    a{
+        text-decoration: none;
+        color:White;
+        font-size: 2rem;
     }
 
     &-logo {
         display:block;
         filter:brightness(0) invert(100);
         margin-bottom: 2em;
+        width:22.5em;
     }
 
-    &-contactgrid {
-        display:grid;
-        grid-template-columns: .25fr 2fr;
-        grid-template-rows: 1fr 1fr;
-        margin-bottom: 2em;
-        gap:.5em;
-    }
 
     &-ul1 {
-        margin-bottom:2em;
+        margin-bottom:3em;
     }
+
+}
+
+// --- ID ---
+
+
+#early-btn {
+    width:70%;
+    font-weight:400;
+
+}
+
+#bottom-content{
+    margin-top: 1em;
+}
+
+
+
+
+
+
+// --- Querys ---
+
+@media (min-width: 1280px) {
+
+    //Remove Mobile Centering
+
+    *{
+        font-size:1vw;
+    }
+
+    body {
+        display:unset;
+    }
+    
+    section {
+        max-width: unset;
+    }
+
+    header {
+        margin-bottom: 1%;
+        margin: 2em 2em
+    }
+
+    .curve-mobile {
+        display:none;
+    }
+
+    .curve-desktop {
+        display:block;
+        width:100%;
+    }
+
+    .content {
+        text-align:left;
+    }
+
+    .illustration {
+        width:50%;
+    }
+
+    .email-container{
+        margin-top: 2em;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        padding-right:4em;
+    }
+
+    .email {
+        font-size:.85rem;
+        width:100%;
+        margin:0;
+    }
+
+    .get-started-btn {
+        font-size:.85rem;
+        width:50%;
+        margin-left:20px;
+        
+    }
+
+    //Sections
+
+    .section1,
+    .section2,
+    .section3 {
+        display:flex;
+        flex-direction: row-reverse;
+    }
+
+    //Resizing
+
+    .section1 {
+        
+        h1 {
+            font-size: 2.9rem;
+            margin-bottom:.25em;
+        }
+        
+        p{
+            font-size:1.35rem;
+        }
+    }
+
 
 }
